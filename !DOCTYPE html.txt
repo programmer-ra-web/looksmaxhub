@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Looksmax & Aesthetic Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .glass { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .glow-cyan { box-shadow: 0 0 20px rgba(6, 182, 212, 0.15); }^^
+    .glow-purple { box-shadow: 0 0 20px rgba(168, 85, 247, 0.15); }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #020617; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-cyan-500 selection:text-black">
+
+  <!-- Navigation Header -->
+  <header class="border-b border-slate-800/80 glass sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center font-black text-slate-950 text-xl shadow-lg shadow-cyan-500/20">L</div>
+        <span class="text-xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">LOOKSMAX<span class="text-white font-light">HUB</span></span>
+      </div>
+      <nav class="hidden md:flex gap-6 text-xs font-semibold uppercase tracking-wider text-slate-400">
+        <a href="#calculator" class="hover:text-cyan-400 transition">Rechner</a>
+        <a href="#guides" class="hover:text-cyan-400 transition">Guides</a>
+        <a href="#hairstyles" class="hover:text-cyan-400 transition">Frisuren</a>
+        <a href="#tracker" class="hover:text-cyan-400 transition">Habits</a>
+      </nav>
+      <span class="text-xs bg-slate-800 text-cyan-400 border border-cyan-500/30 px-3 py-1 rounded-full font-mono">v2.0 PRO</span>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-8 space-y-16 w-full">
+
+    <!-- Hero Section -->
+    <section class="text-center py-10 space-y-4">
+      <div class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 px-4 py-1.5 rounded-full text-xs text-slate-400 mb-2">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> Complete Aesthetic  Platform
+      </div>
+      <h1 class="text-5xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-300 to-purple-500">
+        THE ULTIMATE GLOW-UP GUIDE
+      </h1>
+      <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">
+        Wissenschaftsbasierte Tools für Fitness, Jawline-Optimierung, Hautpflege & Gesichtssymmetrie.
+      </p>
+    </section>
+
+    <!-- SECTION 1: Interaktiver TDEE & Makro-Rechner -->
+    <section id="calculator" class="glass rounded-3xl p-6 md:p-10 border border-slate-800 glow-cyan">
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="text-center space-y-2">
+          <h2 class="text-2xl font-black text-cyan-400 tracking-wide uppercase"><i class="fa-solid font-black fa-calculator mr-2"></i>TDEE & Makro Rechner</h2>
+          <p class="text-xs text-slate-400">Berechne deinen exakten Kalorien- und Nährstoffbedarf für Cut, Lean Bulk oder Recomposition.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-400 mb-2">Gewicht (kg)</label>
+            <input type="number" id="calc-weight" placeholder="z. B. 75" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-sm focus:outline-none focus:border-cyan-500 text-slate-200">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-400 mb-2">Größe (cm)</label>
+            <input type="number" id="calc-height" placeholder="z. B. 180" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-sm focus:outline-none focus:border-cyan-500 text-slate-200">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-400 mb-2">Alter</label>
+            <input type="number" id="calc-age" placeholder="z. B. 20" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-sm focus:outline-none focus:border-cyan-500 text-slate-200">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-400 mb-2">Aktivitätslevel</label>
+            <select id="calc-activity" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-sm focus:outline-none focus:border-cyan-500 text-slate-200">
+              <option value="1.2">Sitzend (Wenig / Kein Sport)</option>
+              <option value="1.375">Leicht aktiv (1-3 Tage/Woche)</option>
+              <option value="1.55" selected>Moderat aktiv (3-5 Tage/Woche)</option>
+              <option value="1.725">Sehr aktiv (6-7 Tage/Woche)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-400 mb-2">Ziel</label>
+            <select id="calc-goal" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-sm focus:outline-none focus:border-cyan-500 text-slate-200">
+              <option value="cut">Fat Loss / Defizit (-500 kcal)</option>
+              <option value="maintain">Erhaltung</option>
+              <option value="bulk">Lean Bulk / Muskelaufbau (+300 kcal)</option>
+            </select>
+          </div>
+        </div>
+
+        <button onclick="calculateMacros()" class="w-full py-3.5 bg-gradient-to-r from-cyan-500 to-indigo-600 rounded-xl font-bold text-sm tracking-wider uppercase hover:opacity-90 transition shadow-lg shadow-cyan-500/20">
+          Werte Berechnen
+        </button>
+
+        <div id="calc-result" class="hidden mt-6 p-6 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-4">
+          <div class="text-center border-b border-slate-800 pb-4">
+            <span class="text-xs text-slate-400 block uppercase tracking-wider">Täglicher Ziel-Kalorienbedarf</span>
+            <span id="res-calories" class="text-4xl font-black text-cyan-400">0 kcal</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 text-center">
+            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800/80">
+              <span class="text-xs text-slate-400 block">Protein</span>
+              <span id="res-protein" class="font-bold text-indigo-400">0g</span>
+            </div>
+            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800/80">
+              <span class="text-xs text-slate-400 block">Kohlenhydrate</span>
+              <span id="res-carbs" class="font-bold text-purple-400">0g</span>
+            </div>
+            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800/80">
+              <span class="text-xs text-slate-400 block">Fette</span>
+              <span id="res-fats" class="font-bold text-amber-400">0g</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Interactive Looksmaxing Modules -->
+    <section id="guides" class="space-y-6">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-2">
+        <div>
+          <h2 class="text-2xl font-black text-indigo-400 uppercase tracking-wide">Looksmaxing Hub</h2>
+          <p class="text-xs text-slate-400">Wähle eine Kategorie für optimierte Workouts & Pflegeroutinen.</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Module 1: Skincare -->
+        <div class="glass p-6 rounded-2xl border border-slate-800 space-y-4 hover:border-cyan-500/40 transition">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center font-bold">01</div>
+          <h3 class="text-lg font-bold text-slate-100">Clear Skin Protocol</h3>
+          <ul class="text-xs text-slate-400 space-y-2">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> **Morgens:** Reiniger, Niacinamid, LSF 50+</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> **Abends:** Doppelreinigung, Salicylsäure (BHA)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Hydratisierung mit Hyaluronsäure</li>
+          </ul>
+        </div>
+
+        <!-- Module 2: Jawline & Mewing -->
+        <div class="glass p-6 rounded-2xl border border-slate-800 space-y-4 hover:border-indigo-500/40 transition">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold">02</div>
+          <h3 class="text-lg font-bold text-slate-100">Jawline & Symmetrie</h3>
+          <ul class="text-xs text-slate-400 space-y-2">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> **Mewing:** Zungenhaltung am Gaumen</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> Körperfettanteil unter 12-14% senken</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> Kaugummi-Training für M. masseter</li>
+          </ul>
+        </div>
+
+        <!-- Module 3: Aesthetic Physique -->
+        <div class="glass p-6 rounded-2xl border border-slate-800 space-y-4 hover:border-purple-500/40 transition">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">03</div>
+          <h3 class="text-lg font-bold text-slate-100">V-Taper Körperbau</h3>
+          <ul class="text-xs text-slate-400 space-y-2">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Fokus auf Seitliche Schultern (Seitheben)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Breite Latissimus-Entwicklung (Klimmzüge)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Schlanke Taille durch kontrollierten Bulk</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Interaktiver Frisuren-Finder nach Gesichtsform -->
+    <section id="hairstyles" class="glass rounded-3xl p-6 md:p-8 border border-slate-800 space-y-6">
+      <div class="text-center space-y-2">
+        <h2 class="text-2xl font-black text-purple-400 uppercase tracking-wide">Gesichtsform & Frisuren-Finder</h2>
+        <p class="text-xs text-slate-400">Wähle deine Gesichtsform für die am besten passenden Haircuts.</p>
+      </div>
+
+      <div class="flex justify-center gap-2 flex-wrap" id="face-shape-buttons">
+        <button onclick="filterHairstyle('oval')" class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs font-semibold hover:border-purple-500 transition active-btn">Oval</button>
+        <button onclick="filterHairstyle('square')" class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs font-semibold hover:border-purple-500 transition">Eckig (Square)</button>
+        <button onclick="filterHairstyle('round')" class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs font-semibold hover:border-purple-500 transition">Rund (Round)</button>
+      </div>
+
+      <div id="hair-result" class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800/80 text-center space-y-2">
+        <h4 id="hair-title" class="text-lg font-bold text-cyan-400">Ovales Gesicht</h4>
+        <p id="hair-desc" class="text-xs text-slate-300 leading-relaxed max-w-xl mx-auto">Sehr symmetrisch! Fast jeder Haarschnitt passt. Empfehlung: Textured Fringe, Textured Crop, Modern Quiff oder Buzz Cut.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Interactive Habit Tracker -->
+    <section id="tracker" class="glass rounded-3xl p-6 md:p-8 border border-slate-800 space-y-6 glow-purple">
+      <div class="flex justify-between items-center">
+        <div>
+          <h2 class="text-2xl font-black text-slate-100 uppercase tracking-wide">Daily Habit Tracker</h2>
+          <p class="text-xs text-slate-400">Markiere deine absolvierten Gewohnheiten für den Tag.</p>
+        </div>
+        <span id="streak-counter" class="text-xs bg-purple-500/10 border border-purple-500/30 text-purple-400 px-3 py-1.5 rounded-full font-bold">0 / 4 Erledigt</span>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <label class="flex items-center gap-3 p-4 bg-slate-900 rounded-2xl border border-slate-800 cursor-pointer hover:border-cyan-500/50 transition">
+          <input type="checkbox" onchange="updateHabit()" class="w-5 h-5 rounded accent-cyan-500 habit-check">
+          <span class="text-xs font-semibold text-slate-300">3L Wasser trinken</span>
+        </label>
+        <label class="flex items-center gap-3 p-4 bg-slate-900 rounded-2xl border border-slate-800 cursor-pointer hover:border-cyan-500/50 transition">
+          <input type="checkbox" onchange="updateHabit()" class="w-5 h-5 rounded accent-cyan-500 habit-check">
+          <span class="text-xs font-semibold text-slate-300">Skincare Routine</span>
+        </label>
+        <label class="flex items-center gap-3 p-4 bg-slate-900 rounded-2xl border border-slate-800 cursor-pointer hover:border-cyan-500/50 transition">
+          <input type="checkbox" onchange="updateHabit()" class="w-5 h-5 rounded accent-cyan-500 habit-check">
+          <span class="text-xs font-semibold text-slate-300">Workout / Training</span>
+        </label>
+        <label class="flex items-center gap-3 p-4 bg-slate-900 rounded-2xl border border-slate-800 cursor-pointer hover:border-cyan-500/50 transition">
+          <input type="checkbox" onchange="updateHabit()" class="w-5 h-5 rounded accent-cyan-500 habit-check">
+          <span class="text-xs font-semibold text-slate-300">8 Std. Schlaf</span>
+        </label>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Legal Footer / Disclaimer -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 py-10 text-slate-500 text-xs mt-16">
+    <div class="max-w-4xl mx-auto px-4 text-center space-y-3">
+      <p class="font-bold text-slate-400 uppercase tracking-widest text-[10px]">Wichtiger rechtlicher Hinweis / Disclaimer</p>
+      <p class="leading-relaxed text-slate-500">
+        Alle auf dieser Website bereitgestellten Rechner, Trainingspläne, Pflegeroutinen und Informationen dienen ausschließlich der allgemeinen Information und Unterhaltung. Sie stellen ausdrücklich keinen medizinischen, sportwissenschaftlichen oder dermatologischen Rat dar. Die Anwendung aller Tipps und Übungen erfolgt auf eigene Verantwortung. Bei gesundheitlichen Beschwerden oder Fragen konsultiere stets qualifiziertes Fachpersonal.
+      </p>
+      <p class="text-slate-600 pt-2 font-mono">© 2026 Looksmax & Fitness Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Embedded JS Logic -->
+  <script>
+    function calculateMacros() {
+      const weight = parseFloat(document.getElementById('calc-weight').value);
+      const height = parseFloat(document.getElementById('calc-height').value);
+      const age = parseFloat(document.getElementById('calc-age').value);
+      const activity = parseFloat(document.getElementById('calc-activity').value);
+      const goal = document.getElementById('calc-goal').value;
+
+      if (!weight || !height || !age) {
+        alert("Bitte fülle alle Eingabefelder aus!");
+        return;
+      }
+
+      // BMR (Mifflin-St Jeor Formel für Männer)
+      let bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+      let tdee = bmr * activity;
+
+      if (goal === 'cut') tdee -= 500;
+      if (goal === 'bulk') tdee += 300;
+
+      const targetCals = Math.round(tdee);
+      const protein = Math.round(weight * 2.0); // 2g pro kg
+      const fats = Math.round(weight * 0.9);    // 0.9g pro kg
+      const carbCalories = targetCals - ((protein * 4) + (fats * 9));
+      const carbs = Math.max(0, Math.round(carbCalories / 4));
+
+      document.getElementById('res-calories').innerText = `${targetCals} kcal`;
+      document.getElementById('res-protein').innerText = `${protein}g`;
+      document.getElementById('res-carbs').innerText = `${carbs}g`;
+      document.getElementById('res-fats').innerText = `${fats}g`;
+
+      document.getElementById('calc-result').classList.remove('hidden');
+    }
+
+    const hairstyles = {
+      oval: {
+        title: "Ovales Gesicht",
+        desc: "Sehr gut proportionierte Gesichtsform! Du kannst fast alle Frisuren tragen. Empfehlungen: Textured Fringe, Textured Crop, Modern Quiff, Taper Fade oder Buzz Cut."
+      },
+      square: {
+        title: "Eckiges Gesicht (Square)",
+        desc: "Markanter Kiefer! Halte die Seiten kurz (Skin Fade / Low Fade) und oben etwas mehr Volumen. Empfehlungen: Buzz Cut, Crew Cut, Slicked Back oder Pompadour."
+      },
+      round: {
+        title: "Rundes Gesicht (Round)",
+        desc: "Ziel ist es, das Gesicht optisch zu strecken. Vermeide flache Frisuren. Empfehlungen: High Volume Quiff, Mid Fade mit strukturiertem Deckhaar, Faux Hawk."
+      }
+    };
+
+    function filterHairstyle(shape) {
+      document.getElementById('hair-title').innerText = hairstyles[shape].title;
+      document.getElementById('hair-desc').innerText = hairstyles[shape].desc;
+    }
+
+    function updateHabit() {
+      const checks = document.querySelectorAll('.habit-check');
+      let checkedCount = 0;
+      checks.forEach(c => { if(c.checked) checkedCount++; });
+      document.getElementById('streak-counter').innerText = `${checkedCount} / ${checks.length} Erledigt`;
+    }
+  </script>
+</body>
+</html>
